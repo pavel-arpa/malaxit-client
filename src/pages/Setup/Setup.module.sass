@@ -1,0 +1,39 @@
+@use "../../global/color"
+@use "../../global/presets"
+@use "../../global/size"
+
+.setup
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: size.$xxl
+    gap: size.$l
+
+.card
+    display: flex
+    flex-direction: column
+    padding: size.$l
+    border-radius: size.$l
+    border: 1px solid color.$gray
+    background-color: #fff
+    box-shadow: presets.$shadow
+    width: 100%
+    min-width: 320px
+    max-width: 480px
+    & button 
+        width: 100%
+
+.heading
+    text-align: center
+
+.options
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: size.$l
+    & h2
+        margin-top: size.$m
+
+.icon
+    width: 20px
+    height: 20px

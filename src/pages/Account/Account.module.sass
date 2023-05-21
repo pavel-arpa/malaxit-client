@@ -1,0 +1,77 @@
+@use '../../global/size'
+@use '../../global/color'
+@use '../../global/presets'
+
+.account
+    display: flex
+    flex-direction: column
+    gap: size.$xxl
+    padding: size.$xxl
+
+.accent
+    position: fixed
+    top: -1000px
+    left: -1000px
+    height: 2000px
+    width: 2000px
+    z-index: -1
+    border-radius: 50%
+    opacity: 0.2
+    background: radial-gradient(circle, color.$accent 0%, rgba(255,255,255,1) 50%)
+
+.profile
+    display: flex
+    align-items: center
+    gap: size.$m
+    &__info
+        display: flex
+        flex-direction: column
+    & img
+        width: size.$x3l
+        height: size.$x3l
+    &__name
+        font-weight: bold
+        font-size: size.$l
+    &__email
+        font-size: size.$m
+        color: gray
+
+.sites
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: size.$m
+    &__list
+        display: flex
+        flex-direction: column
+        gap: size.$m
+        width: 100%
+    &__item
+        display: flex
+        gap: size.$m
+        background-color: #fff
+        align-items: center
+        border: 1px solid color.$gray
+        border-radius: size.$m
+        padding: size.$s
+        transition: all 0.3s
+        cursor: pointer
+        &:hover
+            box-shadow: presets.$shadow
+        & img
+            height: size.$xl
+            width: size.$xl
+            border-radius: size.$s
+            background: rgba(color.$accent, 0.3)
+
+/* For Desktop View */
+@media screen and (min-width: 1024px)
+    .sites
+        &__list
+            max-width: 50%
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .sites
+        &__list
+            max-width: 50%

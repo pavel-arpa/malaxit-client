@@ -1,0 +1,37 @@
+@use "../../global/color"
+@use "../../global/size"
+@use "../../global/presets"
+    
+.wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.card
+    padding: size.$l
+    border-radius: size.$l
+    border: 1px solid color.$gray
+    background-color: #fff
+    box-shadow: presets.$shadow
+    width: 100%
+    min-width: 320px
+    max-width: 480px
+
+.heading
+    text-align: center
+
+.elements
+    display: grid
+    gap: size.$l
+    margin-top: size.$xl
+    margin-bottom: size.$xl
+
+.alter
+    display: flex
+    justify-content: center
+    font-size: size.$m
+    & a
+        color: color.$accent
+        font-weight: bold
+        &:hover
+            opacity: 0.7
