@@ -1,0 +1,42 @@
+@use '../../global/size'
+@use '../../global/color'
+@use '../../global/presets'
+
+.header
+    position: sticky
+    top: 0
+    left: 0
+    ritght: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: size.$m
+    border-bottom: 1px solid color.$gray
+    background-color: #fff
+    z-index: 1000
+    &__content
+        display: flex
+        gap: size.$m
+        width: 100%
+
+.logo
+    height: 40px
+    width: 40px
+
+.navbar
+    display: none
+
+/* For Tablet View */
+@media screen and (min-width: 768px)
+    .navbar
+        display: flex
+        justify-content: space-between
+        gap: size.$l
+
+/* For Desktop View */
+@media screen and (min-width: 1024px)
+
+/* For Large View */
+@media screen and (min-width: 1200px)
+    .header__content
+        max-width: 1200px

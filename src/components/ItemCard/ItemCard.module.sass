@@ -1,0 +1,43 @@
+@use '../../global/size'
+@use '../../global/color'
+@use '../../global/presets'
+    
+    
+.card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+    // border-radius: size.$l
+    // box-shadow: presets.$shadow
+    border: 1px solid color.$gray
+    padding: size.$m
+    gap: size.$m
+    transition: all 0.3s
+    cursor: pointer
+    &:hover
+        background-color: rgba(color.$accent, 0.1)
+    & img
+        border-radius: size.$s
+        background-color: color.$light-gray
+        width: 100%
+        aspect-ratio: 1 / 1
+        object-fit: contain
+    &__price
+        padding: size.$xxs size.$xs
+        background-color: color.$green
+        border-radius: size.$xs
+        color: white
+        font-weight: bold
+        font-size: 16px
+        line-height: 18px
+    &__title
+        font-size: 16px
+        width: 100%
+    &__toCart
+
+@media screen and (min-width: 768px)
+    .card
+        &__price
+            font-size: size.$m
+            line-height: calc(size.$m + 4px)

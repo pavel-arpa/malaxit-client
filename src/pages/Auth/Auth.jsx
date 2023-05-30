@@ -49,6 +49,7 @@ const Auth = observer(() => {
 
     return (
         <div className={s.wrapper} style={{ height: window.innerHeight }}>
+            <img className={s.logo} src={process.env.REACT_APP_API_URL + '/logos/malaxit_text_black.svg'} alt="" />
             <form className={s.card} onSubmit={handleSubmit}>
                 <Heading as='h3' size='lg' className={s.heading}>
                     {isLogin ? 'Вход' : 'Регистрация'}

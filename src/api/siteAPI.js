@@ -9,13 +9,13 @@ export const addSite = async ({
         siteTypeId, paymentMethodId
     })
     localStorage.setItem('token', data.token)
-    return
+    return data
 }
 
 export const getSiteConfig = async ({ id }) => {
     const { data } = await $authHost.get('api/site/config/' + id)
     localStorage.setItem('token', data.token)
-    return data
+    return data.site
 }
 
 export const getSiteTypes = async () => {

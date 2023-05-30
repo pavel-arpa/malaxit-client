@@ -1,1 +1,39 @@
+@use '../../global/size'
+@use '../../global/color'
+@use '../../global/presets'
+
 .editor
+    display: flex
+    height: 100%
+    position: relative
+
+.layout
+    width: 100%
+    // width: 75%
+
+.sidebar
+    display: none
+    position: sticky
+    top: 0
+    width: 25%
+    // height: 100%
+    border-left: 1px solid color.$gray
+    box-shadow: 10px 0 20px 0 gray
+    &__heading
+        position: sticky
+        padding: size.$m
+        border-bottom: 1px solid color.$gray
+        font-weight: bold
+
+.pages
+    display: flex
+    flex-direction: column
+    padding: 0 0
+    &__item
+        display: flex
+        align-items: center
+        height: 40px
+        padding: 0 size.$m
+        cursor: pointer
+        &:hover
+            background: color.$gray

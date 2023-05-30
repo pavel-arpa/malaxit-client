@@ -14,12 +14,12 @@ const Account = observer(() => {
     const { user } = useContext(AppContext)
     const sites = [
         {
-            name: 'Shop',
-            logo: ''
+            name: 'Инетрнет-магазин Azor',
+            logo: 'https://img.freepik.com/premium-vector/online-shop-logo-designs-concept-vector-online-store-logo-designs_7649-661.jpg'
         },
         {
-            name: 'Shop',
-            logo: ''
+            name: 'Кинотеатр PrimeCinema',
+            logo: 'https://img.freepik.com/premium-vector/cinema-film-icon-film-reel-stripes-filmstrip-roll-tapes-movie-cinema-video-studio-production-logo_252051-3012.jpg'
         }
     ]
 

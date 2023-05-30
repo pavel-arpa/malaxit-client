@@ -1,0 +1,21 @@
+@use '../../global/size'
+@use '../../global/color'
+@use '../../global/presets'
+
+.navbar
+    position: sticky
+    bottom: 0px
+    width: 100%
+    background-color: #fff
+    display: flex
+    justify-content: space-around
+    gap: size.$l
+    height: size.$x3l
+    box-shadow: presets.$big-shadow
+    border: 1px solid color.$gray
+    & button
+        width: size.$x3l
+
+@media screen and (min-width: 768px)
+    .navbar
+        display: none

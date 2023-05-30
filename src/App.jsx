@@ -9,11 +9,13 @@ import Setup from './pages/Setup/Setup';
 import { observer } from 'mobx-react-lite';
 import FullscreenSpinner from './components/ui/FullscreenSpinner';
 import Editor from './pages/Editor/Editor';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
     {
         path: "/",
+        errorElement: <ErrorPage />,
         element: <></>,
     },
     {
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
         element: <Setup />,
     },
     {
-        path: AppRoute.EDITOR,
+        path: AppRoute.EDITOR + '/:siteId',
         element: <Editor />,
     },
 ])
@@ -49,7 +51,7 @@ const App = observer(() => {
                 user.setUser(userData)
                 user.setIsAuth(true)
             } catch (error) {
-    
+
             }
             setIsLoading(false)
         }
@@ -57,7 +59,7 @@ const App = observer(() => {
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     if (isLoading) {
-        return <FullscreenSpinner/>
+        return <FullscreenSpinner />
     }
 
     return (

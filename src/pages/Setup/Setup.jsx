@@ -57,13 +57,13 @@ const Setup = observer(() => {
             isPlaceChoosing: checkboxHandlers.isPlaceChoosing.checked,
             paymentMethodId: Number(fields.paymentMethodId)
         }
-        addSite(config).then(response => {
+        addSite(config).then(data => {
             toast({
                 title: 'Сайт создан!',
                 status: 'success',
                 isClosable: true,
             })
-            navigate(AppRoute.EDITOR)
+            navigate(`${AppRoute.EDITOR}/${data.siteId}`)
         }).catch(error => {
             console.log(error)
             toast({
